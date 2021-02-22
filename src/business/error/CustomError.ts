@@ -1,8 +1,6 @@
-export class CustomError extends Error {
-   constructor(
-      public readonly statusCode: number,
-      message: string
-   ) {
-      super(message);
+export abstract class CustomError extends Error {
+   constructor(message: string, public code: number) {
+     super(message);
    }
-}
+ }
+ 
